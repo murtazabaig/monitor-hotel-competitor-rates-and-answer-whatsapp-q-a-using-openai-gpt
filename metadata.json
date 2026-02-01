@@ -1,0 +1,48 @@
+{
+  "id": 12246,
+  "title": "Monitor hotel competitor rates and answer WhatsApp Q&A using OpenAI GPT-4.1",
+  "slug": "monitor-hotel-competitor-rates-and-answer-whatsapp-qa-using-openai-gpt-41-12246",
+  "description": "HOW IT WORKSTop Branch Workflow A1. The Market Intelligence: * Patrols the Market: Runs hourly to scrape competitor rates for future days. * Gathers Intel: If prices spike, it instantly checks event announcements to see if a major event is driving demand. * Crunches Numbers: Calculates the exact price gap and filters out noise.2. The Revenue Manager: * Sets Strategy: The AI Agent reviews the price gaps, competitor moves, and event signals. * Reports: Writes a strategic Executive Summary and sends it to your WhatsApp.Bottom Branch Workflow B3. The Consultant: * Recall: When you ask a question via WhatsApp, the bot retrieves the saved analysis, historical rates, and event schedule. * Answer: It acts as an on-demand analyst, conducting further analysis to give an informed answer to questionsSETUP STEPS1. Config: Add your hotel + competitor hotels (IDs/names) in the Config node.2. Monitor Window: Set how far ahead you want to monitor (e.g., daysAhead = 30)in the Config node.3. Sensitivity: Set how sensitive alerts should be (e.g., alert only ifcompetitor moves > 10%) in the Significant Competitor Change node.4. Connect Credentials: * Amadeus (to fetch hotel prices) * WhatsApp (to send alerts) * Postgres/SQL (to store price snapshots, history, summary) * OpenAI (for the AI Agents)5. Event Source: Update the Fetch VCC nodes to scrape your local conventioncenter or event site.6. Run a test:Trigger Workflow A manually and confirm you receive a WhatsApp alert.Reply to that WhatsApp message to test Workflow B (Q&A).USE CASES & BENEFITSFor Revenue Managers: Automate the \"rate shop\" routine and catch competitormoves without opening a spreadsheet.For Sales & Marketing Teams: Go beyond raw data. Pairing \"what changed\" with\"why changed\" instantly.For Hotel Leadership: Perfect for GMs and division leaders who need instant,decision-ready alerts via WhatsApp.⚡ Zero-Touch Efficiency: Eliminates hours of manual searching by automating ratechecks 3x daily.🧠 Contextual Intelligence: Tracks price AND explains why it moved bycross-referencing local events.🤖 Actionable Strategy: AI doesn't just report numbers; it recommends specificpricing tactics.📉 Long-Term Vision: Builds a permanent database of rate history, enabling theAI to answer complex trend questions over time.📬 WANT TO CUSTOMIZE THIS?[email protected] [/leelin.business@gmail.com/]",
+  "metadescription": "AI hotel revenue assistant: auto-scrapes competitor rates, explains spikes via events, sends WhatsApp strategy alerts, and answers Q&A from history.",
+  "summary": "Hourly competitor rate scouting that flags meaningful spikes and filters out noise with precise price-gap math.  \nInstant demand context by cross-checking local event announcements when the market moves.  \nAI “Revenue Manager” turns signals into pricing strategy and an Executive Summary delivered via WhatsApp.  \nOn-demand WhatsApp Q&A that recalls saved summaries, rate history, and event calendars to answer follow-up questions.  \nBuilt for zero-touch operations: automated rate checks, smarter “what + why” insights, and a growing database for long-term trend analysis.",
+  "date": "29 Dec 2025",
+  "createdAtRaw": "2025-12-29T02:58:58.642+00:00",
+  "categories": [
+    "Market Research",
+    "AI RAG"
+  ],
+  "nodeTypes": [
+    "n8n-nodes-base.if",
+    "n8n-nodes-base.set",
+    "n8n-nodes-base.code",
+    "n8n-nodes-base.html",
+    "n8n-nodes-base.merge",
+    "n8n-nodes-base.whatsApp",
+    "n8n-nodes-base.dataTable",
+    "n8n-nodes-base.stickyNote",
+    "n8n-nodes-base.httpRequest",
+    "n8n-nodes-base.dataTableTool",
+    "@n8n/n8n-nodes-langchain.agent",
+    "n8n-nodes-base.scheduleTrigger",
+    "n8n-nodes-base.whatsAppTrigger",
+    "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+    "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+    "@n8n/n8n-nodes-langchain.outputParserStructured"
+  ],
+  "author": {
+    "name": "Lee Lin",
+    "username": "l2l",
+    "avatar": "https://gravatar.com/avatar/2e3d278746a229599d68038d1870f79582b35bfea9c01a238ce3a7c86ee131b6?r=pg&d=retro&size=200",
+    "verified": false
+  },
+  "popularity": 27,
+  "visitors": 27,
+  "inserters": 7,
+  "templateUrl": "https://n8n.io/workflows/12246",
+  "readme": "",
+  "thumbnail": "https://supabase.amastuces.com/storage/v1/object/public/worklowscreenshot/12246-monitor-hotel-competitor-rates-and-answer-whatsapp-q-a-using-openai-gpt-4-1.webp",
+  "complexityLevel": "advanced",
+  "templateData": null,
+  "price": 0,
+  "referalUrl": null
+}
